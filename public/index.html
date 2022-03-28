@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeClone.io</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="initialScreen">
+            <div class="menu">
+                <h1>SnakeClone.io</h1>
+                <button type="submit" id="newGameButton">New Game</button>
+                <br /> OR <br /> <br />
+                <form>
+                    <input type="text" placeholder="Enter Game Code" id="gameCodeInput">
+                </form>
+                <br />
+                <button type="submit" id="joinGameButton">Join Game</button>
+            </div>
+        </div>
+        <div id="gameScreen">
+            <h3>Your game code is: <span id="gameCodeDisplay"></span></h3>
+            <div class="model" id="winPopup">
+                <div class="model-content">
+                    <h3>You won! :)</h3>
+                    <button type="submit" id="resetButton1">Play again</button>
+                </div>
+            </div>
+            <div class="model" id="losePopup">
+                <div class="model-content">
+                    <h3>You lost! :(</h3>
+                    <button type="submit" id="resetButton2">Play again</button>
+                </div>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id="gameInfo">
+            <p>Use the <code>&uarr;</code><code>&darr;</code><code>&larr;</code><code>&rarr;</code> Arrows or
+                <code>W</code><code>A</code><code>S</code><code>D</code> keys to
+                move.</p>
+        </div>
+        <div class="footer">
+            <p>Made with <span>&hearts;</span> and Websockets! <br /> Source code can be found <a
+                    href="https://github.com/hhamdan95/SnakeClone.io">here</a>.</p>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+        integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
