@@ -3,15 +3,15 @@ const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
 
 // Setup server
-const express = require('express');
-const app = express();
+//const express = require('express');
+//const app = express();
 const http = require('http');
-const server = http.createServer(http);
+const server = http.createServer();
 const PORT = process.env.PORT || 3000; // process.env.PORT is related to deploying on Heroku
 
 // Set static directory
-const path = require('path');
-app.use(express.static(path.join(__dirname, '../public')));
+//const path = require('path');
+//app.use(express.static(path.join(__dirname, '../public')));
 
 // Setup socket.io
 const { Server } = require('socket.io');
@@ -106,4 +106,4 @@ function emitGameOver(roomName, winner) {
     io.sockets.in(roomName).emit('gameOver', { winner });
 }
 
-io.listen(PORT);
+server.listen(`Server listening on PORT: ${PORT}`);
