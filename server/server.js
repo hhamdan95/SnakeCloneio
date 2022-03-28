@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
-const PORT = process.env.PORT || 3000; // process.env.PORT is related to deploying on Heroku
+const PORT = process.env.PORT; // process.env.PORT is related to deploying on Heroku
 
 // Set static directory
 const path = require('path');
