@@ -4,8 +4,7 @@ const SNAKE2_COLOUR = '#ec7063';
 const FOOD_COLOUR = '#e66916';
 
 // Socket.io client-side
-//const socket = io('https://snakecloneio.herokuapp.com/');
-const socket = io('http://localhost:3000');
+const socket = io('https://snakecloneio.herokuapp.com/');
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
 socket.on('gameOver', handleGameOver);
