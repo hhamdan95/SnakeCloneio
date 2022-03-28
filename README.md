@@ -5,3 +5,4 @@ Multiplayer snake game built using Javascript ES6, Node.js, and Socket.io librar
 The game can be played from here: https://snakecloneio.herokuapp.com/
 
 ### Demonstration
+![demo](https://github.com/hhamdan95/SnakeCloneio/blob/master/public/demo.png?raw=true)
