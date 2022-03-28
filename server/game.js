@@ -6,9 +6,6 @@ module.exports = {
     getUpdatedVelocity,
 };
 
-let direction;
-let nextDirection;
-
 function initGame() {
     const state = createGameState();
     randomFood(state);
@@ -37,7 +34,7 @@ function createGameState() {
                 y: 10,
             },
             vel: {
-                x: 0,
+                x: -1,
                 y: 0,
             },
             snake: [
